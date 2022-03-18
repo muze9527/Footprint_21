@@ -11,7 +11,7 @@ functions:
 
 2.26第一次会议（2.27已更新）
 第一次迭代
-ddl：3.14
+ddl：3.18
 任务：
 1. 确定功能（如上）、应用类型（app）、开发工具（flutter）、分工和时间安排
 2. 调研各种开发平台（flutter、react、android studio、wxbit等）
