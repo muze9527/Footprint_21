@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_home"-->
+<!--        android:icon="@drawable/international_1"-->
+<!--        android:title="主页" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_edit"-->
+<!--        android:icon="@drawable/edit_0"-->
+<!--        android:title="发布" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_view"-->
+<!--        android:icon="@drawable/view_0"-->
+<!--        android:title="关注" />-->
+
+<!--    <item-->
+<!--        android:id="@+id/navigation_user"-->
+<!--        android:icon="@drawable/user_0"-->
+<!--        android:title="我的" />-->
+
+</menu>

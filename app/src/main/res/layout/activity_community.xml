@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!--Fixed Block of User Info-->
+    <RelativeLayout
+        android:id="@+id/info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
+        <!--usrname-->
+        <TextView
+            android:id="@+id/usrname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Lihan"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <!--follows-->
+        <Button
+            android:id="@+id/follow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/usrname"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dp"
+            android:text="我关注的" />
+        <!--followers-->
+        <Button
+            android:id="@+id/follow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/usrname"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/follow1"
+            android:text="关注我的" />
+
+        <!--portrait-->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/pic_1" />
+    </RelativeLayout>
+
+    <!--Switch-->
+    <RelativeLayout android:id="@+id/onSwitch"
+        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_above="@id/moments"
+        >
+        <!--line 1-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#666666"
+            android:layout_alignParentTop="true" />
+        <!--line 2-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#666666"
+            android:layout_alignParentBottom="true" />
+        <!--Button-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            >
+            <TextView
+                android:id="@+id/viewfollow"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:text="只看我关注的  "
+                android:textSize="15dp"/>
+
+            <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/viewfollow"
+                android:switchMinWidth="20dp"
+                android:textOn=""
+                android:textOff=""
+                android:thumb="@drawable/thumb"
+                android:track="@drawable/track"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--Scroll View of Moments-->
+    <ScrollView
+        android:id="@+id/moments"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp">
+        <!--根线性布局管理器-->
+        <LinearLayout
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!--嵌套的第一个相对布局管理器-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml">
+                <!--第一个朋友圈头像-->
+                <ImageView
+                    android:id="@+id/ico1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="10dp"
+                    android:src="@mipmap/pic_1" />
+                <!--第一个朋友圈昵称-->
+                <TextView
+                    android:id="@+id/name1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="陈晖洁"
+                    android:textColor="#576B95"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/ico1"
+                    />
+                <!--第一个朋友圈内容-->
+                <TextView
+                    android:id="@+id/content1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*龙门粗口*"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier='1.2'
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:minLines="2"
+                    android:layout_toRightOf="@id/ico1"
+                    android:layout_below="@id/name1"
+                    />
+                <!--第一个朋友圈时间-->
+                <TextView
+                    android:id="@+id/time1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="昨天"
+                    android:textColor="#9A9A9A"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@id/content1"
+                    android:layout_toRightOf="@id/ico1"
+                    />
+                <!--第一个朋友圈点赞图标-->
+                <Button
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/content1"
+                    android:backgroundTint="@android:color/white"
+                    android:background="@drawable/like_activated"
+                    />
+            </RelativeLayout>
+
+            <!--相对布局管理器-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+                <!--头像-->
+                <ImageView
+                    android:id="@+id/ico2"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="10dp"
+                    android:src="@mipmap/pic_2" />
+                <!--昵称-->
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="蓝毒"
+                    android:textColor="#576B95"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/ico2"
+                    />
+                <!--内容-->
+                <TextView
+                    android:id="@+id/content2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我，已经背叛了，接下来，就只剩你了。\n为了我，你就永远当个废物吧；为了能让我好好努力，就一生，都成为我的负担吧。\n我喜欢这个世界上最糟糕的你，最喜欢了。\n毕竟，我选择和纱的理由不为别的。因为比起世界上任何一个人，我都更爱她。\n第一次，有了喜欢的人，还得到了一生的挚友，两份喜悦相互重叠，这双重的喜悦又带来了更多更多的喜悦。\n本应已经得到了梦幻一般的幸福时光，然而，为什么，会变成这样。\n是我，是我先，明明都是我先来的，接吻也好，拥抱也好，还是喜欢上那家伙也好。\n白色相簿什么的，已经无所谓了。\n因为已经不再有歌，值得去唱了。传达不了的恋情，已经不需要了。因为已经不再有人，值得去爱了。\n那我，就选择永远留在你身边。…即便，需要我舍弃所有的一切也好。\n爱的伤痛，要用恋爱来治愈。\n如果一旦说爱你的话，你就会变成这世界上最重要的人了！一旦抱住你，就绝对再也不会放手了啊！\n不会伤害到任何人的恋爱，已经做不到了。必须要做出，非伤害到谁不可的决定了。\n对我来说，你的幸福已经是唯一准则了，我已经决定只有这个能让我做出决定了。你就把你能治好的给治好吧。我的伤，已经不是你能治好的了\n我喜欢喜欢着她的那个他。明明连自己的事情都可以冷静分析，\n在一遇到她时，就会失控起来，这样的他，如果稍稍也能喜欢我一点就好了。\n工作永远不会背叛我，会永远爱着我，和你不一样啊！\n弃犬啊……一旦敞开心扉之后，就会变得不知所措了哦。\n为什么会变成这样呢…喜欢的他，不惜对我撒谎，向我转过身来。\n不惜舍弃自己的思念，向我补偿一切。跨越三年的感情，终于实现了。\n那样本应该已经满足了。只要我的心愿实现，应该就能和好了。\n但，为什么，会变成这样呢。\n"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    android:lineSpacingMultiplier='1.2'
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:minLines="2"
+                    android:layout_toRightOf="@id/ico2"
+                    android:layout_below="@id/name2"
+                    />
+                <!--时间-->
+                <TextView
+                    android:id="@+id/time2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="昨天"
+                    android:textColor="#9A9A9A"
+                    android:layout_marginTop="3dp"
+                    android:layout_below="@id/content2"
+                    android:layout_toRightOf="@id/ico2"
+                    />
+                <!--评论图标-->
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/content2"
+                    android:src="@mipmap/like_static"
+                    />
+                <!--底部分割线-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#666666"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+

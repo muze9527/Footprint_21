@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".InformationActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/elina"
+            android:id="@+id/avatar_img"
+            android:layout_width="120dp"
+            android:layout_height="120dp"/>
+
+        <EditText
+            android:hint="昵称"
+            android:maxLines="1"
+            android:id="@+id/txt_nickName"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/teal_200"
+            app:cardElevation="20dp"
+            app:cardCornerRadius="30dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/personalInfo_txt"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:hint="个人信息"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/teal_200"
+            app:cardElevation="20dp"
+            app:cardCornerRadius="30dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txt_orderList"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:hint="订单列表"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/teal_200"
+            app:cardElevation="20dp"
+            app:cardCornerRadius="30dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txt_changePassword"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:hint="修改密码"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@color/teal_200"
+            app:cardElevation="20dp"
+            app:cardCornerRadius="30dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txt_feedback"
+                android:textSize="30sp"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:hint="意见反馈"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/logout"
+            android:textSize="20sp"
+            android:text="退出登陆"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_gravity="end|bottom" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
